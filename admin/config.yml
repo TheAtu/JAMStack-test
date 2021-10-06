@@ -19,7 +19,7 @@ collections:
     field: 
       - { label: "Title", name: "title", widget: "string"}
       - { label: "Author", name: "author", widget: "string"}
-      - { label: "Tags", name: "tags", widget: "list" default:["post"]}
+      - { label: "Tags", name: "tags", widget: "list", default:["post"]}
       - { label: "Date", name: "date", widget: "datetime"}
       - { label: "Description", name: "description", widget: "markdown"}
       - { label: "Body", name: "body", widget: "markdown"}
