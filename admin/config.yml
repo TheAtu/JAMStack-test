@@ -19,8 +19,9 @@ collections:
     fields: 
       - { label: "Title", name: "title", widget: "string"}
       - { label: "Author", name: "author", widget: "string"}
-      - { label: "Tags", name: "tags", widget: "list", default: ["post"]}
+      - { label: "Tags", name: "tags", widget: "select", multiple: true, min: 1, options: ["post", "featured", "other"], default: ["post"]}
+      - { label: "Image", name: "image", widget: "image"} # default: "/assets/blog/noImage.png"
+      - { label: "Image Description", name: "imageAlt", widget: "string", default: ["{{title}}"]}
       - { label: "Date", name: "date", widget: "datetime"}
       - { label: "Description", name: "description", widget: "markdown"}
       - { label: "Body", name: "body", widget: "markdown"}
-

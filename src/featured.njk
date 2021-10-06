@@ -1,0 +1,15 @@
+---
+title: Featured
+layout: 'base.njk'
+css: style
+---
+<div class="section container">
+  <h1 class="section-title">Featured articles</h1>
+  
+  <ul role="list" class="articles__list flow">
+      <!-- "|reverse" es para invertir el order del default(+viejo a +nuevo)-->
+   {%- for post in collections.featured | reverse -%}
+      {% include 'for-snippet.njk' %}
+   {%- endfor %}
+  </ul>
+  </div> 
