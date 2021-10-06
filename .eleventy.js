@@ -7,9 +7,11 @@ module.exports = function(eleventyConfig) {
 
   // Include other assets/items in public
     eleventyConfig.addPassthroughCopy('./src/assets');
-  //Include Css compiled files
-    eleventyConfig.addPassthroughCopy("./src/css")
-
+    //Include Css compiled files
+      eleventyConfig.addPassthroughCopy("./src/css")
+    //Include Admin CMS files
+      eleventyConfig.addPassthroughCopy("./admin")
+    
   //Use standard time luxon to change default dates to "date_Med"
     eleventyConfig.addFilter("postDate", (dateObj) => {
       return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
